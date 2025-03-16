@@ -1,0 +1,90 @@
+### 로그인
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "test01",
+  "password": "abc135!"
+}
+
+### 가입
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "username": "test01",
+  "name": "김테스트",
+  "password": "abc135!"
+}
+
+### 모든 유저 리스트 가져오기 (로그인 사용자만 접근)
+GET http://localhost:8080/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+
+### 유저 본인 정보 가져오기
+GET http://localhost:8080/users/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+### 유저 본인 정보 수정
+PUT http://localhost:8080/users/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+{
+  "username": "test01",
+  "name": "testNameModfy33",
+  "password": "abc135!"
+}
+
+### 유저 삭제(탈퇴)
+DELETE http://localhost:8080/users/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTIzNDUiLCJleHAiOjE3MzExMjAyMTJ9.Li5h_nH8BsKDlEQ5EzIqwCi9s1XSf8C_C4tPCXcPn5E6qhFxxX_iuZ62W6qxmy7ujYjlr7A9jDF5r767RY9_Wg
+
+{
+  "username": "test",
+  "name": "testNameModfy",
+  "password": "abc135!"
+}
+
+### 게시물 추가
+POST http://localhost:8080/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+{
+  "title": "test title1",
+  "content": "test content1"
+}
+
+### 본인 게시물 수정
+PUT http://localhost:8080/posts/19
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+{
+  "title": "test title",
+  "content": "test content modify"
+}
+
+### 본인 게시물 삭제
+DELETE http://localhost:8080/posts/19
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDEiLCJleHAiOjE3MzExNDM2Mzd9.osBk2cCzeWtr5aucybozDavz8bjLNGcUhafSRZ8-vmeDaIwUH_XvyCNfGH3yk4rUK_EVFOM-IWk-50JYbOJ6jQ
+
+### 특정 게시물 호출
+GET http://localhost:8080/posts/6
+Content-Type: application/json
+
+### 모든 게시물 호출
+GET http://localhost:8080/posts
+Content-Type: application/json
+
+### 인증
+GET http://localhost:8080/protected
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzMxMDY4MzE2fQ.fc_V2igotAv-ducmOuXkea90os_4wobuqrU1qEeyzw5KyhkIEIxA1Tjy_qTZH0iJbrqCQs6QkWAjY3ygMMQluQ
+

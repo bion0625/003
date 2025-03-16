@@ -1,0 +1,4 @@
+com\assignments\service\PostServiceTest.class
+com\assignments\controller\AuthControllerTest.class
+com\assignments\controller\UserControllerTest.class
+com\assignments\controller\PostControllerTest.class

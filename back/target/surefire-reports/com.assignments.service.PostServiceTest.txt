@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.assignments.service.PostServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.263 s -- in com.assignments.service.PostServiceTest
