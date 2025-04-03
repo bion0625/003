@@ -7,19 +7,24 @@ body {
 }
 
 header {
-  margin-left: 100px;
-  margin-top: 20px;
   margin-bottom: 50px;
   color: white;
 }
 
+nav {
+  display: flex;
+  padding-left: 100px;
+  background-color: black;
+  border-bottom: #ffffff solid 1px;
+}
+
 nav > * {
+  align-items: center;
+  margin-top: 0;
   margin-right: 5px;
-  padding: 5px;
   color: white;
-  font-size: medium;
+  font-size: large;
   font-family: 'Courier New', Courier, monospace;
-  border: #ffffff solid 1px;
   text-decoration: none;
 }
 
@@ -38,13 +43,19 @@ nav > *:hover {
   border: #ffffff solid 1px;
   padding: 50px;
   border-radius: 10px;
+  padding-bottom: 100px;
 }
 
 /* content-box 내부 엘리먼트 스타일 (예시) */
 .content-box > * {
-  margin-bottom: 10px; /* 엘리먼트 간 간격 설정 (선택 사항) */
+  padding-bottom: 10px; /* 엘리먼트 간 간격 설정 (선택 사항) */
 }
 
+h1 {
+  color: white;
+  font-size: larger;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 .error {
   color: white;

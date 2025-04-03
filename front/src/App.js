@@ -6,12 +6,13 @@ import Join from './page/Join';
 
 function App() {
 
+  // 새로고침하면 로그인 여부가 false로 바뀌므로, 추후에 localStorage로 수정 예정
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!isLogin) navigate("/login");
-  }, [isLogin])
+  }, [isLogin]);
 
   return (
     <div>

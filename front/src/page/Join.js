@@ -16,6 +16,7 @@ const Join = () => {
 
     return (
         <div className="content-box">
+            <h1>JOIN</h1>
             <input type="text" placeholder="ID" ref={idRef}/>
             <input type="text" placeholder="NAME" ref={nameRef}/>
             <input type="password" placeholder="PASSWORD" ref={passwordRef}/>
