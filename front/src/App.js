@@ -1,6 +1,7 @@
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import Login from './page/Login';
+import Home from './page/Home';
 import { Fragment, useEffect, useState } from 'react';
 import Join from './page/Join';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -33,7 +34,8 @@ function App() {
         </header>
           <div className="content-wrapper">
             <Routes>
-                <Route path='/login' setIsLogin={setIsLogin} element={<Login/>}/>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/login' element={<Login setIsLogin={setIsLogin}/>}/>
                 <Route path='/join' element={<Join/>}/>
             </Routes>
           </div>
