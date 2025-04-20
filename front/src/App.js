@@ -15,15 +15,28 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const token = localStorage.getItem("_auth_token");
+    if (token) setIsLogin(true);
     if (!isLogin) navigate("/login");
   }, [isLogin]);
+
+  const logoutRequest = () => {
+    localStorage.removeItem("_auth_token");
+    setIsLogin(false);
+    navigate("/login");
+  }
 
   return (
     <QueryClientProvider client={queryCleint}>
       <div>
         <header>
           <nav>
-            {isLogin && <Link to="/">HOME</Link>}
+            {isLogin && (
+              <Fragment>
+                <Link to="/">HOME</Link>
+                <Link onClick={logoutRequest}>LOGOUT</Link>
+              </Fragment>
+            )}
             {!isLogin && (
               <Fragment>
                 <Link to="/login">LOGIN</Link>

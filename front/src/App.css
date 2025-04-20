@@ -13,12 +13,13 @@ header {
 
 nav {
   display: flex;
-  padding-left: 100px;
   background-color: black;
   border-bottom: #ffffff solid 1px;
 }
 
 nav > * {
+  padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
   margin-top: 0;
   margin-right: 5px;
